@@ -1,11 +1,18 @@
 print("=" * 40)
 print("bienvenue")
 print("=" * 40)
-nom = input("quel est bon ton nom?")
+if len(sys.argv) > 1:
+    nom = sys.argv[1]
+else:
+    nom = "etudiant jenkins "
+    
 print(f"bonjour{nom}, ton job jenkins a reussi ")
 
 a = 10
 b = 5
 print(f"{a} + {b} = {a+b}")
 print(f"{a} - {b} = {a-b}")
+
+assert a + b == 15, "le test a echoue !"
+print(" tout les tests passent avec succes")
 
